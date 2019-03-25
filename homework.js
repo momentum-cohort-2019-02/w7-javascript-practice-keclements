@@ -1,12 +1,19 @@
 // 1. Set the variable `givenName` to the string "Addison".
-let givenName;
-givenName = 'Addison' 
+let givenName = 'Addison' 
 
 // 2. Set candies equal to 20, people to 6, and leftover equal
 // to the remainder of dividing 20 by 6.
-
+let candies = '20', people = '6'
+candies = '20'
+people = '6'
+let leftover = (candies / people)
+console.log(leftover)
 // 3. Create a function called greeting that returns "Hello, <name>!",
 // where <name> is the name given as an argument to the function.
+function greetingHello(name) {
+	return `Hello, ${name}!`
+}
+
 
 // 4. Create a function called isOdd that, given a number, will
 // return true if it is odd and false if it is not. An odd number is a
