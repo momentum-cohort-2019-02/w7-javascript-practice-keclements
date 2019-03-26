@@ -82,16 +82,24 @@ function lesser (a, b) {
 // eo - Saluton, <name>!
 //
 // If any other language code is used, return nothing.
-function multigreeting(name, lang) {
-	if (lang === "en") {
-		
+function multigreeting(name, code) {
+	if (code === 'en') {
+		return `Hello, ${name}!`
+	} else if (code === 'es') {
+		return `¡Hola, ${name}!`
+	} else if (code === 'fr') {
+		return `Bonjour, ${name}!`
+	} else if (code === 'eo') {
+		return `Saluton, ${name}!`
+	} else {
+		return undefined
 	}
 }
-
-
 // 10. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
-
+function sum(numbers) {
+	if (numbers.length ===0 )
+}
 // 11. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
 
