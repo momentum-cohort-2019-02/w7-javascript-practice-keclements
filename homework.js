@@ -28,7 +28,12 @@ function isOdd(number) {
 // return true if it is even and false if it is not. An even number is a
 // number which, when divided by 2, has a remainder of 0.
 
-
+function isEven(number) {
+	const remainder = number % 2
+	if (remainder === 0 {
+		return true}
+	}
+}
 // 6. Create a function called fahrenheitToCelsius that takes a
 // Fahrenheit temperature as an argument and returns the
 // temperature in Celsius.
