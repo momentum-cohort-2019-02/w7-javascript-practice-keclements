@@ -106,6 +106,8 @@ function sum(numbers) {
 }
 // 11. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
+
+//reference :https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 function average(numbers) {
 	if (numbers.length === 0) {
 		return undefined
@@ -116,6 +118,9 @@ function average(numbers) {
 
 // 12. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
+function minimum(numbers)
+
+
 
 // 13. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
