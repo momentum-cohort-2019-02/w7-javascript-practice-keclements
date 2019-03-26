@@ -108,17 +108,23 @@ function sum(numbersArray) {
 }
 // 11. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
-function average(numbersArray) {
-	if (numbersArray.length > 0) {
+
+function average(numbers) {
+	if (numbers.length === 0) {
 		return undefined
 	} else {
-		return (numbersArray.reduce((x, y) => x + y) / numbersArray.length)
+		return (numbers.reduce((x, y) => x + y) / numbers.length)
 	}
-}
 
 // 12. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
-
+function minimum(numbers) {
+    if (numbers.length === 0) {
+        return undefined
+    } else {
+        return Math.min(...numbers)
+    }
+}
 // 13. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
 // implement sorting ourselves, however.
