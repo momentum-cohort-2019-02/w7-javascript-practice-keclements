@@ -106,19 +106,31 @@ function sum(numbers) {
 }
 // 11. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
-
-//reference :https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
-function average(numbers) {
+function minimum(numbers) {
 	if (numbers.length === 0) {
 		return undefined
 	} else {
-		return (numbers.reduce((x, y) => x + y) / numbers.length)
+		return Math.min(...numbers)
 	}
 }
-
 // 12. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
-function minimum(numbers)
+
+function selectionSort(numbers) {
+	if (numbers.length <= 1) {
+		return numbers
+	} else {
+		numbers = numbers.slice(0)
+		let sortedNumbers = []
+		while (numbers.length > 0) {
+			let minNum = minimum(numbers)
+			let minIndex = numbers.indexOf(minNum)
+			numbers.splice(minIndex, 1)
+			sortedNumbers.push(minNum)
+		}
+	}
+	return sortedNumbers
+}
 
 
 
