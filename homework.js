@@ -106,6 +106,16 @@ function sum(numbers) {
 }
 // 11. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
+function average(numbers) {
+	if (numbers.length === 0) {
+		return undefined
+	} else {
+		return (numbers.reduce((x, y) => x + y) / numbers.length)
+	}
+}
+// 12. Create a function called "minimum" that takes an array of numbers and
+// returns the smallest number in that array.
+
 function minimum(numbers) {
 	if (numbers.length === 0) {
 		return undefined
@@ -113,31 +123,24 @@ function minimum(numbers) {
 		return Math.min(...numbers)
 	}
 }
-// 12. Create a function called "minimum" that takes an array of numbers and
-// returns the smallest number in that array.
-
-function selectionSort(numbers) {
-	if (numbers.length <= 1) {
-		return numbers
-	} else {
-		numbers = numbers.slice(0)
-		let sortedNumbers = []
-		while (numbers.length > 0) {
-			let minNum = minimum(numbers)
-			let minIndex = numbers.indexOf(minNum)
-			numbers.splice(minIndex, 1)
-			sortedNumbers.push(minNum)
-		}
-	}
-	return sortedNumbers
-}
-
-
-
 // 13. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
 // implement sorting ourselves, however.
-//
+//function selectionSort(numbers) {
+if (numbers.length <= 1) {
+	return numbers
+} else {
+	numbers = numbers.slice(0)
+	let sortedNumbers = []
+	while (numbers.length > 0) {
+		let minNum = minimum(numbers)
+		let minIndex = numbers.indexOf(minNum)
+		numbers.splice(minIndex, 1)
+		sortedNumbers.push(minNum)
+	}
+}
+return sortedNumbers
+}
 // A "selection sort" is one of the most simple sorting algorithms. To implement it,
 // you start with an unsorted array of numbers. You search the array and find the
 // smallest number in the array. You then insert that into a new array as the first
